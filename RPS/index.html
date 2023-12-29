@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+    <!-- partial -->
+    <script src='https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.11.0/tsparticles.confetti.bundle.min.js'></script>
+    <script src="./script.js"></script>
+
+    <section id="demos" class="invisible">
+        <div id="taskbar">
+            <span>
+                <h3>Rock Paper Scissors</h3>
+            </span>
+            <div id="links">
+                <a href="./signup/sign.html" class="link">Sign Up</a>
+                <a href="./login/login.html" class="link">Login In</a>
+            </div>
+            <div id="loginpass" style="display: none;">
+
+            </div>
+        </div>
+        <div id="countdown">
+            To Start click "enable webcam" and press "start"</div>
+        <div id="dataDiv">
+            <div class="text">
+                <span id="aa">Username</span><span id="aaa">WinStreak</span>
+            </div>
+        </div>
+        <div id="streak" style="display: none;">
+            <span id="highest"></span>
+            <span id="current"></span>
+        </div>
+        <div class="center" >
+            <div class="check" id="win">
+              <i class="far fa-check-circle color"></i> &nbsp; &nbsp;
+              <span>You Win! - Nailed It!</span>
+            </div>
+        
+            <div class="info" id="offline">
+              <i class="fa fa-info-circle spin"></i>
+              &nbsp; &nbsp;
+              <span id = "textstatus">No Login Detected</span>
+            </div>
+        
+            <div class="warning" id="tie">
+              <i class="fa fa-exclamation-triangle rotate"></i>
+              &nbsp; &nbsp;
+              <span>Tie - Close one ain't it </span>
+            </div>
+        
+            <div class="danger"id ="lose">
+              <i class="far fa-times-circle shine"></i>
+              &nbsp; &nbsp;
+              <span>AI Wins - AI rules the world</span>
+            </div>
+          </div>
+
+        <div id="realbody">
+            <div id="body1">
+                <div id="ai_image">
+                    <img id="displayedImage" src="">
+                </div>
+                <div style="position: relative;overflow: hidden;top:3%;">
+                    <video id="webcam" autoplay playsinline></video>
+                    <canvas class="output_canvas" id="output_canvas" width="1000" height="500"
+                        style="position: absolute; left: 0px; top: 0px;"></canvas>
+                    <p id='gesture_output' class="output">
+                </div>
+            </div>
+            <div id="buttons">
+                <button id="webcamButton" class="mdc-button mdc-button--raised" style="cursor: pointer;">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">ENABLE WEBCAM</span>
+                </button>
+                <button id="input_user" class="mdc-button mdc-button--raised" style="cursor: pointer;">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">PLAY</span>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <div id="foooter">
+        <h3>&copy; Rock Paper Scissors. All rights reserved (joke)</h3>
+    </div>
+</footer>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="./script.js"></script>
+
+</html>
