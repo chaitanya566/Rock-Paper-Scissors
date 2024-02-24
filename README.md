@@ -28,6 +28,8 @@ To get started with the project, follow these steps:
 4. If you have an account, run `login.py` located in the `login` folder to log in to your account.
  - Alternatively, you can skip the entire process by simply running index.html in the root folder. This allows you to play the game directly with the computer without using any additional features.
    
+## Output Images
+
 ## Features
 
 - **Gesture Recognition**: Utilizes Mediapipe's AI model to detect hand gestures, enabling intuitive gameplay.

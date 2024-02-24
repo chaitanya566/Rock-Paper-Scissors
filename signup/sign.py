@@ -5,7 +5,7 @@ import json
 mydb = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
-    password="add-your-password-here",
+    password="Enter-Your_password_here",#
     database="firstdb"
 )
 mycursor = mydb.cursor()
