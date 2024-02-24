@@ -29,6 +29,34 @@ To get started with the project, follow these steps:
  - Alternatively, you can skip the entire process by simply running index.html in the root folder. This allows you to play the game directly with the computer without using any additional features.
    
 ## Output Images
+   <table>
+   <tr>
+      <td>
+         Sign-Up Page
+      </td>
+      <td>
+         Login Page
+      </td>
+   </tr>
+    <tr>
+        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/signup.png" alt="Gaussian Blur" width="500" ></td>
+        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/login.png" alt="test" width="500" ></td>
+    </tr>
+</table>
+   <table>
+   <tr>
+      <td>
+         Main Page
+      </td>
+      <td>
+         Data stored in a Database
+      </td>
+   </tr>
+    <tr>
+        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/main.png" alt="Gaussian Blur" width="500" ></td>
+        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/Screenshot 2024-02-24 220147.png" alt="test" width="500" ></td>
+    </tr>
+</table>
 
 ## Features
 
@@ -59,6 +87,21 @@ To get started with the project, follow these steps:
 - **main.py**: Python script responsible for backend logic and database interaction.
   
 - **index.html**: HTML file for the root page of the project.
+## Game Play Images
+   <table>
+   <tr>
+      <td>
+         User Win Image
+      </td>
+      <td>
+         System Win image
+      </td>
+   </tr>
+    <tr>
+        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/win.png" alt="Gaussian Blur" width="500" ></td>
+        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/lose.png" alt="test" width="500" ></td>
+    </tr>
+</table>
 
 ## Advantages
 
