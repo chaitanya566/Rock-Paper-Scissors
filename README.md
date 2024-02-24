@@ -54,7 +54,7 @@ To get started with the project, follow these steps:
    </tr>
     <tr>
         <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/main.png" alt="Gaussian Blur" width="500" ></td>
-        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/Screenshot 2024-02-24 220147.png" alt="test" width="500" ></td>
+        <td><img src="https://github.com/chaitanya566/Rock-Paper-Scissors/blob/main/images/Mysql.png" alt="test" width="500" ></td>
     </tr>
 </table>
 
