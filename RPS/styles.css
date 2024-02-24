@@ -1,337 +1,321 @@
 @import "@material";
-*{
-    margin:0;
-    padding:0;
-    font-family: 'Open Sans', sans-serif;
-    
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-body{
-    height:90vh;
-    --mdc-theme-primary: #007f8b;
-    --mdc-theme-on-primary: #f1f3f4;
+body {
+  height: 90vh;
+  --mdc-theme-primary: #007f8b;
+  --mdc-theme-on-primary: #f1f3f4;
 }
-#taskbar{
-    display:flex;
-    justify-content: space-between;
-    font-size: 2vw;
-    background-color: rgba(0, 0, 0, 0.9);
-    height:10vh;
+#taskbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 10vh;
 }
-#taskbar span{
-    padding:1%;
-    color:white;
+#taskbar span {
+  padding: 1%;
+  color: white;
 }
-#links{
-    margin-top:1%;
+#links {
+  margin-top: 1%;
 }
-.link{
-    font-size:1vw;
-    margin-right:1vw;
-    color:white;
+.link {
+  font-size: 1vw;
+  margin-right: 1vw;
+  color: white;
 }
-#realbody{
-    background-color: rgba(0, 0, 0, 0.9);
-    height:80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-
+#realbody {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-#countdown{
-    color:white;
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    height:0;
-    width:0;
-    left:50%;
-    top:17%;
-    white-space: nowrap;
-    font-size:200%;
-    
+#countdown {
+  color: white;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 0;
+  width: 0;
+  left: 50%;
+  top: 17%;
+  white-space: nowrap;
+  font-size: 200%;
 }
-#body1{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height:80%;
-    width:75%;
-    
+#body1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 75%;
 }
-.text{
-    display:flex;
-    flex-direction: row;
-
+.text {
+  display: flex;
+  flex-direction: row;
 }
 #aa {
-    margin-right: 10px; /* Add space to the right of the first span */
+  margin-right: 10px; /* Add space to the right of the first span */
 }
 
 #aaa {
-    margin-left: 10px; /* Add space to the left of the second span */
+  margin-left: 10px; /* Add space to the left of the second span */
 }
-#dataDiv{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    left:1%;
-    top:40%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 150%;
-    color:white;
-    height:30%;
-    width:auto;
-    border:3px solid;
-    border-color: #f1f3f4;
-    padding-left:15px;
-    padding-right:15px;
+#dataDiv {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  left: 1%;
+  top: 40%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 150%;
+  color: white;
+  height: 30%;
+  width: auto;
+  border: 3px solid;
+  border-color: #f1f3f4;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-#ai_image{
-
-    height:75%;
-    width:33%;
-    width: 300px; /* Set the width of the container div */
-    height: 300px; /* Set the height of the container div */
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 47%;
+#ai_image {
+  height: 75%;
+  width: 33%;
+  width: 300px; /* Set the width of the container div */
+  height: 300px; /* Set the height of the container div */
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 47%;
 }
-#ai_image img{
-    max-width: 100%; /* Ensure the image width doesn't exceed the container width */
-    max-height: 100%; /* Ensure the image height doesn't exceed the container height */
-    display: block; /* Remove any extra space below the image */
-    margin: 0 auto;
+#ai_image img {
+  max-width: 100%; /* Ensure the image width doesn't exceed the container width */
+  max-height: 100%; /* Ensure the image height doesn't exceed the container height */
+  display: block; /* Remove any extra space below the image */
+  margin: 0 auto;
 }
-#webcam1{
-    position:relative;
-    bottom:40px;
-    right:40px;
-    height:75%;
-    width:37%;
-    border: 10px;
-    border-color: aqua;
+#webcam1 {
+  position: relative;
+  bottom: 40px;
+  right: 40px;
+  height: 75%;
+  width: 37%;
+  border: 10px;
+  border-color: aqua;
 }
 #camera-feed {
-    width: 100%; /* Set the width of the video element to 100% of its parent */
-    height: auto; /* Allow the height to adjust proportionally to the video's aspect ratio */
-  }
-#footer{
-    display: flex;
+  width: 100%; /* Set the width of the video element to 100% of its parent */
+  height: auto; /* Allow the height to adjust proportionally to the video's aspect ratio */
+}
+#footer {
+  display: flex;
 }
 
-footer{
-    height: 10vh;
-    display:flex;
-    width:100vw;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    color:white;
+footer {
+  height: 10vh;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
 }
-#input_user{
-    width:6%;
-    height:100%;
-    margin-left:5%;
+#input_user {
+  width: 6%;
+  height: 100%;
+  margin-left: 5%;
 }
-#buttons{
-    display: flex;
-    flex-direction: row;
-    width:100%;
-    justify-content:center;
-    font-stretch:expanded;
+#buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  font-stretch: expanded;
 }
-
-
-
 
 .center {
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .check {
-    border-radius: 5px;
-    position: absolute;
-    width: 220px;
-    height: 30px;
-    text-align: left;
-    display: none;
-    align-items: center;
-    padding: 10px;
-    background-color: #2B3246;
-    cursor:pointer;
-    /* box-shadow:  9px 9px 18px #262c3e,
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.check {
+  border-radius: 5px;
+  position: absolute;
+  width: 220px;
+  height: 30px;
+  text-align: left;
+  display: none;
+  align-items: center;
+  padding: 10px;
+  background-color: #2b3246;
+  cursor: pointer;
+  /* box-shadow:  9px 9px 18px #262c3e,
     -9px -9px 18px #30384e; */
+  color: #0ad406;
+  margin: 20px;
+}
+.check:hover {
+  background-color: rgba(147, 209, 117, 0.5);
+  transition: 0.5s;
+}
+
+.color {
+  animation: color 2s linear infinite;
+}
+
+#loginpass {
+  color: white;
+  margin-right: 15px;
+  margin-top: 25px;
+}
+#streak {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  font-size: 30px;
+  top: 40%;
+  border: 7px;
+  border-color: white;
+  left: 80%;
+}
+.info {
+  border-radius: 5px;
+  position: absolute;
+  width: 250px;
+  height: 30px;
+  text-align: left;
+  display: none;
+  align-items: center;
+  padding: 10px;
+  background-color: #2b3246;
+  cursor: pointer;
+  /* box-shadow:  9px 9px 18px #262c3e,
+      -9px -9px 18px #30384e; */
+  color: rgb(82, 125, 243);
+  margin: 20px;
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(
+      -100px
+    ); /* Adjust the value to control the distance it goes up */
+  }
+}
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+.info:hover {
+  background-color: rgba(82, 125, 243, 0.5);
+  transition: 0.5s;
+}
+
+.warning {
+  position: absolute;
+  border-radius: 5px;
+  width: 220px;
+  height: 30px;
+  text-align: left;
+  display: none;
+  align-items: center;
+  padding: 10px;
+  background-color: #2b3246;
+  cursor: pointer;
+  /* box-shadow:  9px 9px 18px #262c3e,
+      -9px -9px 18px #30384e; */
+  color: rgb(247, 149, 72);
+  margin: 20px;
+}
+
+.warning:hover {
+  background-color: rgba(247, 149, 73, 0.5);
+  transition: 0.5s;
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+.danger {
+  position: absolute;
+  border-radius: 5px;
+  width: 220px;
+  height: 30px;
+  text-align: left;
+  display: none;
+  align-items: center;
+  padding: 10px;
+  background-color: #2b3246;
+  cursor: pointer;
+  /* box-shadow:  9px 9px 18px #262c3e,
+      -9px -9px 18px #30384e; */
+  color: rgb(255, 10, 1);
+  margin: 20px;
+}
+
+.danger:hover {
+  background-color: rgba(255, 10, 1, 0.33);
+  transition: 0.5s;
+}
+
+.shine {
+  animation: shine 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color {
+  50% {
+    color: #2b3246;
+  }
+  100% {
     color: #0ad406;
-    margin: 20px;
   }
-  .check:hover{
-    background-color: rgba(147, 209, 117, 0.50);
-    transition:0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .color {
-    animation: color 2s linear infinite;
+  20% {
+    transform: rotate(90deg);
   }
-  
-  #loginpass{
-    color:white;
-    margin-right:15px;
-    margin-top:25px;
+  40% {
+    transform: rotate(0deg);
   }
-  #streak{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    position: absolute;
-    font-size: 30px;
-    top:40%;
-    border:7px;
-    border-color: white;
-    left:80%;
+  80% {
+    transform: rotate(-90deg);
   }
-  .info {
-    border-radius: 5px;
-    position: absolute;
-    width: 250px;
-    height: 30px;
-    text-align: left;
-    display: none;
-    align-items: center;
-    padding: 10px;
-    background-color: #2B3246;
-    cursor:pointer;
-    /* box-shadow:  9px 9px 18px #262c3e,
-      -9px -9px 18px #30384e; */
-    color: rgb(82, 125, 243);
-    margin: 20px;
+}
+
+@keyframes shine {
+  0% {
+    color: #2b3246;
   }
-  @keyframes fadeOutUp {
-    0% {
-        opacity: 1;
-        
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-100px); /* Adjust the value to control the distance it goes up */
-    }
+  50% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 40px red, 0 0 60px red,
+      0 0 80px red;
   }
-  .spin {
-    animation: spin 2s linear infinite;
-  }
-  
-  .info:hover
-  {
-    background-color: rgba(82, 125, 243, 0.50);
-    transition:0.5s;
-  }
-  
-  .warning {
-    position: absolute;
-    border-radius: 5px;
-    width: 220px;
-    height: 30px;
-    text-align: left;
-    display: none;
-    align-items: center;
-    padding: 10px;
-    background-color: #2B3246;
-    cursor:pointer;
-    /* box-shadow:  9px 9px 18px #262c3e,
-      -9px -9px 18px #30384e; */
-    color: rgb(247, 149, 72);
-    margin: 20px;
-  }
-  
-  .warning:hover{
-    background-color: rgba(247, 149, 73, 0.50);
-    transition:0.5s;
-  }
-  
-  
-  .rotate {
-    animation: rotate 2s linear infinite;
-  }
-  .danger {
-    position: absolute;
-    border-radius: 5px;
-    width: 220px;
-    height: 30px;
-    text-align: left;
-    display: none;
-    align-items: center;
-    padding: 10px;
-    background-color: #2B3246;
-    cursor:pointer;
-    /* box-shadow:  9px 9px 18px #262c3e,
-      -9px -9px 18px #30384e; */
-    color: rgb(255, 10, 1);
-    margin: 20px;
-  }
-  
-  .danger:hover
-  {
-    background-color: rgba(255, 10, 1, 0.33);
-    transition:0.5s;
-  }
-  
-  
-  .shine {
-    animation: shine 2s linear infinite;
-  }
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes color {
-    50% {
-     color: #2B3246;
-    }
-    100% {
-      color: #0ad406;
-    }
-  }
-  
-  @keyframes rotate {
-   0% {
-      transform: rotate(0deg);
-    }
-    20% {
-      transform: rotate(90deg);
-    }
-    40% {
-      transform: rotate(0deg);
-    }
-    80% {
-      transform: rotate(-90deg);
-    }
-  }
-  
-  @keyframes shine {
-    0% {
-     color: #2B3246;
-    }
-    50% {
-      text-shadow:
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 40px red,
-        0 0 60px red,
-        0 0 80px red;
-    }
-  }
+}

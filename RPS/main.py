@@ -5,8 +5,8 @@ import json
 mydb = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
-    password="add-your-password-here",
-    database="firstdb"
+    password="add-your-password-here",  # you have to add your password for your Database here!!!
+    database="firstdb" # add the name of your database
 )
 mycursor = mydb.cursor()
 async def handler(websocket, path):

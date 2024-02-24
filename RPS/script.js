@@ -12,8 +12,8 @@ const videoHeight = "360px";
 const videoWidth = "480px";
 let data = null;
 let inputArray = null;
-let user_streak=null;
-let user_current_streak=0;
+let user_streak = null;
+let user_current_streak = 0;
 const socket = new WebSocket("ws://localhost:8000");
 socket.addEventListener("open", function (event) {
   socket.send("Connection Established");
@@ -142,12 +142,12 @@ const element1 = document.getElementById("offline");
 const element2 = document.getElementById("win");
 const element3 = document.getElementById("tie");
 const element4 = document.getElementById("lose");
-const statusTextElement=document.getElementById("textstatus")
-const loginpass=document.getElementById("links");
-const logindetail=document.getElementById("loginpass");
-const streakcurrentid=document.getElementById("current");
-const streakhighid=document.getElementById("highest");
-const streakid=document.getElementById("streak");
+const statusTextElement = document.getElementById("textstatus");
+const loginpass = document.getElementById("links");
+const logindetail = document.getElementById("loginpass");
+const streakcurrentid = document.getElementById("current");
+const streakhighid = document.getElementById("highest");
+const streakid = document.getElementById("streak");
 console.log(element2);
 socket.onmessage = function (event) {
   // Handle incoming data from the server
@@ -160,8 +160,8 @@ socket.onmessage = function (event) {
     }
   } else if (Number.isInteger(data)) {
     console.log(data);
-    user_streak=data;
-    streakhighid.textContent = "Highest WinStreak : "+ user_streak;
+    user_streak = data;
+    streakhighid.textContent = "Highest WinStreak : " + user_streak;
     console.log("The value is an integer.");
   } else {
     inputArray = data;
@@ -173,45 +173,42 @@ socket.onmessage = function (event) {
       socket.send(storedUsername);
       console.log(storedUsername);
       statusTextElement.textContent = "Login Detected";
-      loginpass.style.display="none";
-      logindetail.style.display="flex";
-      logindetail.textContent ="Logged in as : "+storedUsername;
-      logindetail.style.color="white";
+      loginpass.style.display = "none";
+      logindetail.style.display = "flex";
+      logindetail.textContent = "Logged in as : " + storedUsername;
+      logindetail.style.color = "white";
       var link = document.createElement("a");
       link.href = "./login/login.html"; // Set the link's href attribute
       link.textContent = "Change?"; // Set the link's text
-      link.style.color="white";
-      link.style.fontSize="25px";
-      link.style.marginLeft="30px";
-// Append the link to the div
-streakid.style.display="flex"
-streakcurrentid.textContent = "Current WinStreak : "+ user_current_streak;
-streakhighid.textContent = "Highest WinStreak : "+ user_streak;
+      link.style.color = "white";
+      link.style.fontSize = "25px";
+      link.style.marginLeft = "30px";
+      // Append the link to the div
+      streakid.style.display = "flex";
+      streakcurrentid.textContent =
+        "Current WinStreak : " + user_current_streak;
+      streakhighid.textContent = "Highest WinStreak : " + user_streak;
       logindetail.appendChild(link);
       element1.style.display = "flex"; // Show the element
       element1.style.animation = "fadeOutUp 2s 5s forwards";
-      
 
       // Add an event listener to detect the end of the CSS animation
       element1.addEventListener("animationend", function () {
         element1.style.animation = "none"; // Reset the animation
         element1.style.display = "none";
-         // Hide the element
+        // Hide the element
         element1.style.opacity = 1; // Reset the opacity for future use
         element1.style.transform = "translateY(0)"; // Reset the transform for future use
       });
-      
     } else {
-      
       element1.style.display = "flex"; // Show the element
       element1.style.animation = "fadeOutUp 2s 5s forwards";
-      
 
       // Add an event listener to detect the end of the CSS animation
       element1.addEventListener("animationend", function () {
         element1.style.animation = "none"; // Reset the animation
         element1.style.display = "none";
-         // Hide the element
+        // Hide the element
         element1.style.opacity = 1; // Reset the opacity for future use
         element1.style.transform = "translateY(0)"; // Reset the transform for future use
       });
@@ -229,7 +226,6 @@ button.addEventListener("click", async function () {
   // Example action, you can replace this with your own code
   let countdown = 3;
   countdownElement.textContent = `video will take input in : ${countdown}`;
-  
 
   const countdownInterval = setInterval(() => {
     countdown--;
@@ -246,25 +242,21 @@ button.addEventListener("click", async function () {
     let user_turn = null;
     let result;
     if (results.gestures.length > 0) {
-      
       if (categoryName === "Closed_Fist") {
         user_turn = 1;
-        
       } else if (categoryName === "Open_Palm") {
-        
         user_turn = 2;
       } else if (categoryName === "Victory") {
-        
         user_turn = 3;
       } else {
         console.log("invalid move");
       }
       if (user_turn === ai_turn) {
         result = "It's a tie!";
-        countdownElement.textContent = `Click on play again!`
+        countdownElement.textContent = `Click on play again!`;
         element3.style.display = "flex";
         element3.style.animation = "fadeOutUp 2s 2s forwards";
-  
+
         // Add an event listener to detect the end of the CSS animation
         element3.addEventListener("animationend", function () {
           element3.style.animation = "none"; // Reset the animation
@@ -278,9 +270,10 @@ button.addEventListener("click", async function () {
         (user_turn === 3 && ai_turn === 2)
       ) {
         result = `You win!`;
-        user_current_streak=user_current_streak+1;
-        countdownElement.textContent = `Click on play again!`
-        streakcurrentid.textContent = "Current WinStreak : "+ user_current_streak;
+        user_current_streak = user_current_streak + 1;
+        countdownElement.textContent = `Click on play again!`;
+        streakcurrentid.textContent =
+          "Current WinStreak : " + user_current_streak;
         //===========================================
       } else if (
         (user_turn === 1 && ai_turn === 2) ||
@@ -288,22 +281,23 @@ button.addEventListener("click", async function () {
         (user_turn === 3 && ai_turn === 1)
       ) {
         result = `AI wins!`;
-        if(user_current_streak>user_streak){
+        if (user_current_streak > user_streak) {
           //==================================================================================================================
-          let send_data=[storedUsername,user_current_streak]
+          let send_data = [storedUsername, user_current_streak];
           socket.send(send_data);
           console.log(send_data);
           console.log(user_current_streak);
           console.log(user_streak);
-          user_streak=user_current_streak;
-          user_current_streak=0;
-          streakcurrentid.textContent = "Current WinStreak : "+ user_current_streak;
+          user_streak = user_current_streak;
+          user_current_streak = 0;
+          streakcurrentid.textContent =
+            "Current WinStreak : " + user_current_streak;
         }
-        
-        countdownElement.textContent = `Click on play again!`
+
+        countdownElement.textContent = `Click on play again!`;
         element4.style.display = "flex";
         element4.style.animation = "fadeOutUp 2s 2s forwards";
-  
+
         // Add an event listener to detect the end of the CSS animation
         element4.addEventListener("animationend", function () {
           element4.style.animation = "none"; // Reset the animation
@@ -313,14 +307,13 @@ button.addEventListener("click", async function () {
         });
       } else {
         result = "Invalid choice.";
-        countdownElement.textContent = `Click on play again!`
+        countdownElement.textContent = `Click on play again!`;
       }
     }
     console.log(result);
     if (result === `You win!`) {
-  
-       // Show the element
-       element2.style.display = "flex";
+      // Show the element
+      element2.style.display = "flex";
       element2.style.animation = "fadeOutUp 2s 2s forwards";
 
       // Add an event listener to detect the end of the CSS animation
@@ -364,7 +357,11 @@ button.addEventListener("click", async function () {
     }
   }, 3000);
 });
-const images = ["./images/rock.svg", "./images/Paper.svg", "./images/Scissors.svg"];
+const images = [
+  "./images/rock.svg",
+  "./images/Paper.svg",
+  "./images/Scissors.svg",
+];
 
 // Function to choose a random image
 function chooseImage() {

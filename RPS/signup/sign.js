@@ -2,7 +2,7 @@ const socket = new WebSocket("ws://localhost:8080");
 socket.addEventListener("open", function (event) {
   socket.send("Connection Established");
 });
-let UserNameList =null;
+let UserNameList = null;
 let i = 0;
 socket.onmessage = function (event) {
   // Handle incoming data from the server
