@@ -22,7 +22,7 @@ To get started with the project, follow these steps:
     2. After creating the database, modify the values related to the database connection in the main.py file. Update the mydb variable with your database credentials.
 ## How to Start
 
-1. Navigate to the `start folder` located inside the root folder (`RPS`).
+1. Navigate to the `start folder` located inside the root folder.
 2. Run `index.html` located in the start folder to initiate the experience.
 3. If you haven't created an account yet, run `signup.py` located in the `signup` folder to create an account. Alternatively, if you already have an account, proceed to the next step.
 4. If you have an account, run `login.py` located in the `login` folder to log in to your account.
