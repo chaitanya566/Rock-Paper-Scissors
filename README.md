@@ -17,7 +17,7 @@ To get started with the project, follow these steps:
     1. If you want to store the streak in a database, create a MySQL database using the database.sql file located in the database folder. You can use the following command in the MySQL command line interface:
     
         ``` bash
-        source RPS\database\db.sql
+        source database\db.sql
         ```
     2. After creating the database, modify the values related to the database connection in the main.py file. Update the mydb variable with your database credentials.
 ## How to Start
